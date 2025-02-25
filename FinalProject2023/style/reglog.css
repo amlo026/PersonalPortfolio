@@ -1,0 +1,9 @@
+.container {padding: 16px;background-color: white;}
+input[type=text], input[type=password] {width: 50%;padding: 15px;margin: 5px 0 22px 0;display: inline-block;border: none;background: #f1f1f1;}
+input[type=text]:focus, input[type=password]:focus {background-color: #ddd;outline: none;}
+hr {border: 1px solid #f1f1f1;margin-bottom: 25px;}
+a {color: dodgerblue;}
+.signin {background-color: #f1f1f1;text-align: center;}
+.submit[type='button'] {padding: 15px 25px;font-size: 24px;text-align: center;cursor: pointer;outline: none;color: #fff;background-color: #04AA6D;border: none;border-radius: 15px;box-shadow: 0 9px #999;}
+.submit[type='button']:hover {background-color: #3e8e41}
+.submit[type='button']:active {background-color: #3e8e41;box-shadow: 0 5px #666;transform: translateY(4px);}

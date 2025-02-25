@@ -1,0 +1,12 @@
+
+input[type=text], select, textarea {width: 80%;padding: 12px;border: 1px solid #ccc;margin-top: 6px;margin-bottom: 16px;resize: vertical; text-align: center;}
+input[type=submit] {background-color: #4c04aa;color: white;padding: 12px 20px; order: none;cursor: pointer;border-radius: 10px;} 
+input[type=submit]:hover {background-color:darkorchid;}
+
+/*about us section*/
+td{text-align: center;}
+.profession{background-color: springgreen;padding: 5px; margin: 5px; width: 400px;}
+img{height: 550px;}
+table{width: 65%; background-color: white; padding: 20px;margin-top: -25px;}
+table a{color:blue;}
+.about-section {padding: 30px;text-align: center;background-color:royalblue;color: white;margin-bottom: 50px; margin-top: 15px;}

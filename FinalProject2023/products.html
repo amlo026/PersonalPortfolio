@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Products</title>
+<link type="text/css" rel="stylesheet" href="style/manage.css">
+<link type="text/css" rel="stylesheet" href="style/products.css">
+  <script src="js/cookiemanager.js"></script>
+  <script src="js/Catalog.js"></script>
+  <script src="js/Cart.js"></script>
+  <script src="js/menu.js"></script>
+</head>
+
+<body>
+      <div class="logo">
+        <div class="logo_text">
+          <h1><a href="startpage.html">Life <br>Wellness<br>Store</a></h1>
+        </div>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a class="home" href="startpage.html">Home</a></li>
+          <li><a class="activeproducts" href="products.html">Products</a></li>
+          <li><a class="contact" href="contact.html">Contact</a></li>
+          <li><a class="about" href="about.html">About</a></li>
+        </ul>
+        <span id="logoutbutton"></span>
+        <input type="button" value="Cart" class="cartbutton" button onclick="window.location.href='cart.html';">
+      </div>
+    <center><div class="producttable" style="overflow: auto;">
+        <h1>Products</h1>
+        <br>
+        <div id="itemstable"></div>
+        <script>  
+          let catalog = new Catalog();
+          let x = catalog.getProducts();
+          for (let i = 0; i < x.length; i++) {
+            let productHTML = `
+              <div class="product">
+                <img src="images/${x[i].image}" alt="${x[i].name}" />
+                <div>
+                  <div class="title"> <p>${x[i].name}</p> <a>$${x[i].price}</a></div>
+                  <p>${x[i].description}<a href="#" onclick="setCookie('item', ${x[i].id},1);location.href='solopage.html';"> More...</a></p>
+                  <div class="actionbuttons">
+                    <center>
+                    <input type="button" value="Add to Cart" class="addcart" onclick="let x=new Cart(getCookie('whoami'));alert('Item added to cart'); x.addItem(${x[i].id},1);">
+                    <input type="button" value="Go to Cart" class="gocart" button onclick="window.location.href='cart.html';">
+                </center
+                    </div>
+              </div>
+            `;
+            document.getElementById("itemstable").innerHTML += productHTML;
+          }
+        </script>
+      </div></center>
+      <div class="footer">
+        <p><a href="startpage.html">Home Page</a> | <a href="products.html">Products</a> | <a href="Contact.html">Contact Us</a> | <a
+            href="About.html">About Us</a> | <a href="credits.html">Artist Credits</a></p>
+            </div>
+</body>
+</html>

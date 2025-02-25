@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Solopage</title>
+  <link type="text/css" rel="stylesheet" href="style/manage.css">
+  <link type="text/css" rel="stylesheet" href="style/products.css">
+  <script src="js/cookiemanager.js"></script>
+  <script src="js/Catalog.js"></script>
+  <script src="js/Cart.js"></script>
+  <script src="js/menu.js"></script>
+</head>
+
+<body>
+      <div class="logo">
+        <div class="logo_text">
+          <h1><a href="startpage.html">Life <br>Wellness<br>Store</a></h1>
+        </div>
+      </div>
+      <div class="nav">
+        <ul>
+        <li><a class="home" href="startpage.html">Home</a></li>
+        <li><a class="activeproducts" href="products.html">Products</a></li>
+        <li><a class="contact" href="contact.html">Contact</a></li>
+        <li><a class="about" href="about.html">About</a></li>
+      </ul>
+      <span id="logoutbutton"></span>
+      <input type="button" value="Cart" class="cartbutton" button onclick="window.location.href='cart.html';">
+      </div>
+    <center><div class="tables">
+        <h1>Products</h1>
+        
+        <script>
+            let catalog = new Catalog();
+            let x = catalog.getItem(getCookie('item'));
+            document.writeln
+                (`
+                    <center>
+                    <img src="images/${x.image}" style="width:500px;" onclick="#"/><center>
+                    <div style="border:solid cornflowerblue 2px;background:#f7f7f7;float:left; margin-left:10vh">
+                    <div class="titlesolopage">${x.name}</div>
+                    <p style="text-align:center; width:50vh">${x.description} <b> $${x.price}</b>
+                        <center><input type="button" value="Add to Cart" class="addcartsolo" onclick="let x=new Cart(getCookie('whoami'));alert('Item added to cart'); x.addItem(${x.id},1);">
+                        <input type="button" value="Go to Cart" class="gocartsolo" button onclick="window.location.href='cart.html';">
+                    </center>
+                        </p>
+                    </div>
+                    `);
+        </script>
+    </div></center>
+    <div class="footer">
+      <p><a href="startpage.html">Home Page</a> | <a href="products.html">Products</a> | <a href="Contact.html">Contact Us</a> | <a
+          href="About.html">About Us</a> | <a href="credits.html">Artist Credits</a></p>
+          </div>
+</html>

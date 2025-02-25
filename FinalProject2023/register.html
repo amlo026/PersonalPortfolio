@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Register</title>
+
+  <link type="text/css" rel="stylesheet" href="style/manage.css">
+  <link type="text/css" rel="stylesheet" href="style/reglog.css">
+
+  <script src="js/cookiemanager.js"></script>
+  <script src="js/Login.js"></script>
+
+  <script>
+    function register() {
+      let x = new Login();
+      if (x.register(userid.value, password.value)) location.href = "login.html";//REDIRECT TO LOGIN.HTML
+      else message.innerHTML = "ERROR: User already in DB";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="logo">
+    <div class="logo_text">
+      <h1><a href="startpage.html">Life <br>Wellness<br>Store</a></h1>
+    </div>
+</div>
+    <center>
+      <br><br>
+        <div class="container"> 
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+        <form action="#" method="post" style="width: 50%;">
+          <p><div id="message"></div></p>
+          <div class="container">
+            <p><span>Username: </span><input class="contact" type="text" id="userid" /></p>
+            <p><span>Password: </span><input class="contact" type="password" id="password" /></p>
+            <input type="checkbox" onclick="passwordshow()">Show Password
+            <script>
+              function passwordshow() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                  x.type = "text";
+                } else {
+                  x.type = "password";
+                }
+              }
+              </script>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="button" name="contact_submitted"
+                value="Register" onclick="register();" /></p>
+          </div>
+        </form>
+        </div>
+      </center>
+      <div class="container signin">
+        <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+      </div>
+    </div>
+    <a href="login.html">Login</a>
+  </div>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Cart</title>
+  <link type="text/css" rel="stylesheet" href="style/manage.css">
+  <link rel="stylesheet" type="text/css" href="style/products.css" />
+  <script src="js/cookiemanager.js"></script>
+  <script src="js/Catalog.js"></script>
+  <script src="js/Cart.js"></script>
+  <script src="js/menu.js"></script>
+  <script>
+    function update(x){
+      let idqtyvalue=document.getElementById('qty'+x).value;
+      let y = new Cart(getCookie('whoami'));
+      y.updateItem(x,idqtyvalue);
+      location.reload();
+    }
+  </script>
+</head>
+
+<body>
+    <div class="logo">
+      <div class="logo_text">
+        <h1><a href="startpage.html">Life <br>Wellness<br>Store</a></h1>
+      </div>
+  </div>
+      <div class="nav">
+        <ul>
+        <li><a class="home" href="startpage.html">Home</a></li>
+        <li><a class="products" href="products.html">Products</a></li>
+        <li><a class="contact" href="contact.html">Contact</a></li>
+        <li><a class="about" href="about.html">About</a></li>
+      </ul>
+      <span id="logoutbutton"></span>
+      <input type="button" value="Cart" class="cartbutton" button onclick="window.location.href='cart.html';">
+      </div>
+    <center><div class="tables">
+    <div id="content">
+        <h1>Cart</h1>
+            <script>
+              let total = 0;
+                let cat = new Catalog();
+                let x = new Cart(getCookie('whoami'));
+                let items = x.getCart();
+                if (items.length!=0)
+                {
+                document.writeln("<table>");
+                document.writeln(`<tr><th colspan='2'>NAME</th><th>QUANTITY</th><th>PRICE</th><th>SUBTOTAL</th></tr>`);
+                for (let i = 0; i < items.length; i++) {
+                  let itemqtyid='qty'+items[i].code;
+                    let item = cat.getItem(items[i].code);
+                    let price = parseFloat(item.price) * parseInt(items[i].quantity);
+                    document.writeln("<tr>");
+                    document.writeln("<td style='text-align:left'>");
+                    document.writeln("<img src='images/" + item.image + "' style='width:100px'/></td>");
+                    document.writeln("<td style='text-align:center'>" + item.name + "</td>");
+                    document.writeln("<td style='text-align:right'>");
+                    document.writeln(`<input id='${itemqtyid}' type='text' value='${items[i].quantity}'style='width:40px'/>`);
+                    document.writeln(`<img src='images/update.jpg' style='width:20px' id='${items[i].code}' onclick='update(this.id);' />`);
+                    document.writeln(`<img src='images/x.png' style='width:20px'onclick=delete2('${items[i].code}') /></td>`);
+                    document.writeln("<td style='text-align:center'>$" + item.price.toFixed(2) + "</td>");
+                    document.writeln("<td style='text-align:center'>$" + price.toFixed(2) + "</td>");
+                    document.writeln("</tr>");
+                    total+=price;
+                }
+                document.writeln("<tr><td colspan=4 style='text-align:center'>Total Amount</td><td style='text-align:center'>"+total+"</td></tr>");
+                document.writeln("</table>");
+                document.writeln(`<a href="checkout.html">Click Here to Checkout</a>`);
+                }
+                else{
+                  document.writeln("<center><h2>Cart Empty</h2></center>");
+                  document.writeln(`<a href="products.html">Return to Products</a>`);
+                }
+                function delete2(code) {  
+                    let iii = new Cart(getCookie('whoami'));
+                    iii.delItem(code);
+                    location.reload();
+                }
+            </script>
+            </div>
+            </div>
+        </center>
+        <div class="footer">
+          <p><a href="startpage.html">Home Page</a> | <a href="products.html">Products</a> | <a href="Contact.html">Contact Us</a> | <a
+              href="About.html">About Us</a> | <a href="credits.html">Artist Credits</a></p>
+              </div>
+</body>
+</html>

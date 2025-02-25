@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Logout</title>
+ 
+  <link type="text/css" rel="stylesheet" href="style/manage.css">
+  <link type="text/css" rel="stylesheet" href="style/reglog.css">
+  <script src="js/cookiemanager.js"></script>
+  <script src="js/Login.js"></script>
+  <script src="js/menu.js"></script>
+  <script>
+    function logout()
+    {
+        delCookie("flag","",-1);
+        delCookie("whoami","", -1);
+        location.href="login.html";
+    }
+  </script>
+</head>
+
+<body>
+  <div class="logo">
+    <div class="logo_text">
+      <h1><a href="startpage.html">Life <br>Wellness<br>Store</a></h1>
+    </div>
+</div>
+      <div class="nav">
+        <ul>
+        <li><a class="home" href="startpage.html">Home</a></li>
+        <li><a class="products" href="products.html">Products</a></li>
+        <li><a class="contact" href="contact.html">Contact</a></li>
+        <li><a class="about" href="about.html">About</a></li>
+      </ul>
+      <span id="logoutbutton"></span>
+      <input type="button" value="Cart" class="cartbutton" button onclick="window.location.href='cart.html';">
+      </div>
+    </div>
+    <div id="content">
+      <center>
+        <form style="font-size: 50px; margin-top: 100px; background-color: white; width: 50vw;"> Are you sure you want to log out?<br>
+          <input type="button" value="Logout" onclick="logout();"> </form>
+        </center>
+      </div>
+      <div class="footer">
+        <p><a href="startpage.html">Home Page</a> | <a href="products.html">Products</a> | <a href="Contact.html">Contact Us</a> | <a
+            href="About.html">About Us</a> | <a href="login.html">Return to Login</a></p>
+            </div>
+</html>
