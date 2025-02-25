@@ -1,0 +1,142 @@
+body {
+    background-size: cover;
+    background-image: url("../media/pexels-presents.jpg");
+    background-size: 100%;
+}
+
+nav{
+    background: rgb(192, 74, 53);
+}
+
+nav a{
+    color: white;
+}
+
+#message {
+    margin-top: 55px;
+    text-shadow: 1px 0 15px black;
+}
+
+.projectsHeader {
+    padding-top: 80px;
+}
+
+.projectsTable p {
+    text-shadow: 5px 2px 5px black,
+    -4px -4px 5px black,
+    1px 4px 5px black,
+    5px -4px 5px black,
+    -5px -2px 5px black;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 30px;
+    margin: 5px;
+    text-align: center;
+}
+
+img:hover {
+    box-shadow: 0px 0px 10px 10px rgb(0, 255, 76);
+}
+
+/* Small screen */
+.projectsTable {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "a1"
+    "a2"
+    "res"
+    "rDesc"
+    "textP"
+    "proto"
+    "wellness";
+}
+
+#lifeApp {
+    margin-top: 20px;
+} 
+
+#assign1 {
+    grid-area: a1;
+}
+#assign1Info {
+    grid-area: a1info;
+}
+#assign2 {
+    grid-area: a2;
+}
+#assign2Info {
+    grid-area: a2info;
+}
+#resumePage {
+    grid-area: res;
+}
+#resumeDesc{
+    grid-area:rDesc;
+}
+
+#lifeApp {
+    grid-area: proto;
+}
+#prototypeDesc{
+    grid-area: pDesc;
+}
+
+#textPage {
+    grid-area: textP;
+}
+#wellnessWebsite {
+    grid-area: wellness;
+}
+#websiteDesc{
+    grid-area: wDesc;
+}
+
+.projectsfooter {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: rgb(192, 74, 53);
+    color: white;
+}
+
+.projectsfooter a {
+    color: white;
+}
+
+/* For screens smaller than 1200px */
+@media(min-width: 1200px) {
+
+    .projectsTable {
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        width: 100%;
+        grid-template-areas:
+            "a1 a2"
+            "a1info a2info"
+            "res textP"
+            "rDesc rDesc"
+            "proto wellness"
+            "pDesc wDesc"
+        ;
+    }
+
+    #lifeApp {
+        margin-top: 0px;
+    } 
+
+    #lifeApp img{
+        height:100%;
+    }
+
+    #wellnessWebsite img{
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMCC Life Wellness App</title>
+    <link rel="stylesheet" type="text/css" href="css/manage.css">
+    <style>
+        body{
+            background-size: cover;
+            background-image: url("../media/pexels-quintingellar-313782.jpg");
+            background-size: 100%;
+        }
+        p{
+            background-color: rgba(255, 255, 255, 0.884);
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 18px;
+        }
+        #container{
+            width: 2200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "desc desc"
+                "present app"
+            ;
+            column-gap: 10px;
+        }
+        img{
+            height: 569px;
+            border-radius: 20px;
+        }
+
+        #description{
+            grid-area: desc;
+        }
+        #presentation{
+            grid-area: present;
+        }
+        #appImage{
+            grid-area: app;
+        }
+
+        @media (max-width: 2210px) {
+            #container{
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+                grid-template-areas: 
+                    "desc"
+                    "present"
+                    "app"
+                ;
+            }
+            #slideshow{
+                margin-top: -20px;
+            }
+            p{
+                width: 920px;
+            }
+            img{
+            width: 960px;
+            height: initial;
+            }
+        }
+
+        @media (max-width: 970px){
+            #container{
+                display:initial;
+            }
+            div{
+                margin-bottom: 10px;
+            }
+            #slideshow{
+                width: 100%;
+                margin-top: initial;
+            }
+            p{
+                width: 95%;
+            }
+            img{
+            width: 100%;
+            }
+        }
+
+        @media(max-width:750px) {
+            #slideshow{
+                height:450px;
+            }
+            p{
+                width: initial;
+            }
+        }
+
+        @media(max-width:600px) {
+            #slideshow{
+                height:380px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div id="description">
+        <p>The Fall 2023 Ideathon was to create a solution out of six topics provided to us.
+            The topic my team chose was the health and wellness of those at the college. The prompt states:
+            <b>"Mental and physical wellbeing are essential ingredients in any student’s educational
+             and personal success,
+             but it is not always easy to find the time and 
+             resources needed to take care of ourselves.
+             What apps or websites could we develop to help BMCC students connect with
+             health, fitness and wellness opportunities?"
+            Conclusion:</b> Create an app in the form of a leisure game.
+            At the user's pace, it sets as a reminder to take time
+            out of their busy schedule to notice the state of their wellbeing,
+            while also providing resources to help them succeed. 
+            The app does not limit itself just to students but also to faculty.
+        </p></div>
+    <div id="presentation"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT4WrlzZ88TLpjyeZN74Hvenr_OIEJ18m6KpwoDaxJ-x0ONkt7ADRIJN3f3pLgyuEXqWiQCqxrDzNSI/embed?start=false&loop=false&delayms=3000" 
+    frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" id="slideshow"></iframe></div>
+    <div id="appImage"><img src="../media/lifeApp.jpg" alt="prototypeImage" id="proImage"></div>
+    <!-- <iframe src="https://paceuniversity-my.sharepoint.com/personal/al16851n_pace_edu/_layouts/15/Doc.aspx?sourcedoc={300c4b3c-0ee9-4c51-9353-5ac07b78c54f}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0" 
+    width="1000px" height="605px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
+    </iframe> -->
+    </section>
+        
+</body>
+</html>

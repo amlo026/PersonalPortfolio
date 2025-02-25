@@ -1,0 +1,21 @@
+html{font-family:Georgia, serif}
+body {background-size: cover}
+
+/*resume*/
+.resumetable{height: 88.5vh; width:95vh; background-color:rgba(241, 241, 241, 0.594);padding: 15px;border-radius:15px;}
+.resume{width: 85%;}
+.basicresume{background-color:rgb(253, 199, 106);border:3px solid black;color:black;border-radius:10px;font-size: 20px;}
+.basicresume:hover {background-color:rgb(204, 104, 50); color: white;}
+.resumefooter {position: fixed;left: 0;bottom: 0;width: 100%;background-color: rgb(186, 121, 16);text-align: center; color: white;}
+.resumefooter a, #footer a:hover{color: white;font-weight: bold;text-decoration: none;}
+.resumefooter a:hover{text-decoration: underline;}
+
+/*textresume*/
+.texttable{width:95vh; background-color:rgba(241, 241, 241, 0.594);padding: 15px;border-radius:15px;}
+.resumeinfo{margin-left: 10px; margin-right: 10px;}
+span{float: right;}
+.texttable hr{height:2px;border-width:0;color:black;background-color:black; margin-top: -15px;}
+.texttable table{width: 100%; margin-top: -10px; margin-bottom: -22px;}
+.textresumefooter {position: fixed;left: 0;bottom: 0;width: 100%;background-color:rgb(175, 88, 88);text-align: center; color: white;}
+.textresumefooter a, #footer a:hover{color: white;font-weight: bold;text-decoration: none;}
+.textresumefooter a:hover{text-decoration: underline;}

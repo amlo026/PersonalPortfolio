@@ -1,0 +1,110 @@
+body{
+    color:white;
+    margin: 0;
+}
+
+nav{
+    background: linear-gradient(to left, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    text-align: center;
+    padding: 1em;
+}
+
+header{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1px;
+    margin-bottom: 60px;
+    border-style: solid;
+    border-width: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: bold;
+}
+
+.title{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 80px;
+    border-style: solid;
+    border-width: 5px;
+    border-image: repeating-linear-gradient(to left, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    margin: 20px auto;
+    width: 50%;
+    background-color: black;
+    padding:20px;
+    text-decoration: none;
+    color: white;
+    min-width: 30px;
+}
+
+/* Image responding to shrink */
+img{max-width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 5px rgb(49, 49, 38));
+}
+
+/*Footer*/
+
+footer {
+    position: absolute;
+    left: 0; 
+    width: 100%;
+    background: linear-gradient(to left, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    text-align: center;
+    color: black;
+}
+
+nav a, footer a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+    font-size: 20px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Header Adjustment on Shrink*/
+
+@media (max-width:790px){
+    .title{
+        font-size: 68px;
+    }
+}
+
+@media (max-width:700px){
+    .title{
+        font-size: 65px;
+    }
+}
+
+@media (max-width:670px){
+    .title{
+        font-size: 60px;
+    }
+}
+
+@media (max-width:635px){
+    .title{
+        font-size: 55px;
+    }
+}
+
+@media (max-width:590px){
+    .title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width:540px){
+    .title{
+        font-size: 45px;
+    }
+}
+
+@media (max-width:510px){
+    .title{
+        font-size: 40px;
+    }
+}

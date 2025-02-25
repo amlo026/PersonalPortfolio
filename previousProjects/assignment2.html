@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/manage.css">
+        <title>Assignment 2</title>
+        <style>
+            body{background-image: linear-gradient(180deg, #EE8434, #C95D63, #AE8799, #717EC3, #496DDB);
+            height: 95vh;}
+            .header{text-align: center;
+            color: #496DDB;
+            text-shadow: 5px 4px  black;
+            font-size: 100px;
+            font-weight: bolder;
+            margin-bottom: 60px;}
+            .header:hover{transform: rotate(180deg)}
+            #words{text-align: center;
+                font-size: x-large;
+                color: white;
+                text-shadow: 3px 2px  black;
+                font-weight: bold;
+                width: 100%;
+                transition:linear 1s}
+            #words:hover {background-color:blue;}
+            .content{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 20px;}
+            img{border-radius: 20px;
+                filter: drop-shadow(10px 10px 5px rgb(219, 216, 14));
+                max-width: 100%;}
+            img:hover{
+                filter: drop-shadow(10px 10px 5px rgb(14, 219, 209));
+            }
+            h1{text-align: center;
+                color: white;
+                text-shadow: 3px 2px black;}
+            .art{color:  #C95D63;
+                font-size: 150%;
+                font-weight: bolder; 
+                background-color: white;
+                width: 210px;
+                border-radius: 10px;
+                padding: 5px;}
+            @media (max-width: 700px){
+                body{background-image: linear-gradient(180deg, #EE8434, #C95D63, #AE8799, #717EC3, #496DDB);
+                    height: 100%;}
+                .content{
+                    display: grid;
+                    grid-template-columns: 1fr;}
+                .art{font-size: 120%;
+                    width: 167px;
+                    padding: 3px;}
+                img{width: 100%;}
+            }
+
+        </style>
+    </head>
+    <body>
+            <p class="header">Ultra Corp</p>
+            <p id="words">Buy boosts for your essential living needs!</p>
+            <div class="test"></div>
+            <section class="content">
+                <div id="item1"><img src="../media/shanehuntartanxiety.jpg" alt="antianxiety">
+                    <h1>Anti-Anxiety</h1></div>
+                <div id="item2"><img src="../media/shanehuntarthealth.jpg" alt="health">
+                    <h1>Health</h1></div>
+                <div id="item3"><img src="../media/shanehuntartmotivationorg.jpg" alt="motivation">
+                    <h1>Motivation</h1></div>
+                <div id="item4"><img src="../media/shanehuntarttime.jpg" alt="time">
+                    <h1>Time</h1></div>
+        </section>
+        <p class="art">Art by: 
+            <a href="https://www.reddit.com/r/Art/comments/9aaaur/potions_digital_1200x1200px/">Shane Hunt</a>
+        </p>
+    </body>
+</html>
